@@ -1,22 +1,19 @@
 "use client";
-import NavigationMenu from "@/components/layout/navigation-menu";
 import { Container } from "@/components/ui";
+import NavigationMenu from "@/components/layout/navigation-menu";
 
 import AvatarIcon from "@/public/icons/avatar.svg";
 
-export default function Header() {
-  const links = [
-    { path: "/", label: "Início" },
-    { path: "/transferencias", label: "Transferências" },
-    { path: "/investimentos", label: "Investimentos" },
-    { path: "/outros-servicos", label: "Outros serviços" },
-  ];
+interface Props {
+  routes?: Record<string, string>[];
+}
 
+export default function Header({ routes }: Props) {
   return (
     <div className="bg-cyan-300">
       <Container className="h-[96px] flex justify-between items-center">
         <div>
-          <NavigationMenu variant="light" menuItens={links} />
+          <NavigationMenu variant="light" menuItens={routes} />
         </div>
 
         <div className="flex gap-40 items-center">

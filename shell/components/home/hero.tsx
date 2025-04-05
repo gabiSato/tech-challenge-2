@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 
 const UserRegisterModal = lazy(() => import("auth/user-register-modal"));
 const UserLoginnModal = lazy(() => import("auth/user-login-modal"));
@@ -17,9 +17,11 @@ export default function Hero() {
         <HeroImage className="w-full lg:w-[662px]" />
 
         <div className="flex gap-24 sm:hidden">
-          <UserLoginModal triggerButtonVariant="black-primary" />
+          <Suspense>
+            <UserLoginnModal triggerButtonVariant="black-primary" />
 
-          <UserRegisterModal triggerButtonVariant="black-secondary" />
+            <UserRegisterModal triggerButtonVariant="black-secondary" />
+          </Suspense>
         </div>
       </div>
     </section>

@@ -3,14 +3,13 @@ import { useState } from "react";
 import clsx from "clsx";
 
 import CustomLink from "@/components/layout/custom-link";
-import type { TextColor } from "./ui/text";
 
 import MenuIcon from "@/public/icons/menu.svg";
 import CloseIcon from "@/public/icons/close.svg";
 
 interface NavigationMenuProps {
   variant?: "light" | "dark";
-  menuItens?: { path: string; label: string }[];
+  menuItens?: Record<string, string>[];
 }
 
 export default function NavigationMenu({
@@ -26,18 +25,14 @@ export default function NavigationMenu({
     light: {
       toggle: "text-orange-200",
       background: "bg-green-100",
-      linkActive: "border-b-green-200",
-      linkActiveText: "orange-200",
-      linkInactive: "black",
-      separator: "border-b-black",
+      linkActive: "text-md-bold text-orange-200 border-b-green-200",
+      linkInactive: "text-md-regular text-black border-b-black",
     },
     dark: {
       toggle: "text-green-200",
       background: "bg-black",
-      linkActive: "border-b-white",
-      linkActiveText: "green-200",
-      linkInactive: "white",
-      separator: "border-b-green-200",
+      linkActive: "text-md-bold text-green-200 border-b-white",
+      linkInactive: "text-md-regular text-white border-b-green-200",
     },
   };
 
@@ -71,14 +66,9 @@ export default function NavigationMenu({
                 href={item.path}
                 className={clsx(
                   "block pb-16 mb-16 text-center group-not-last-of-type:border-b",
-                  variants[variant].separator
+                  variants[variant].linkInactive
                 )}
-                textSize="md"
-                textColor={variants[variant].linkInactive as TextColor}
-                textWeight="regular"
                 activeClassName={variants[variant].linkActive}
-                activeTextColor={variants[variant].linkActiveText as TextColor}
-                activeTextWeight="bold"
               >
                 {item.label}
               </CustomLink>

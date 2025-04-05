@@ -1,5 +1,4 @@
-"use client";
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 
 const UserRegisterModal = lazy(() => import("auth/user-register-modal"));
 const UserLoginnModal = lazy(() => import("auth/user-login-modal"));
@@ -37,9 +36,11 @@ export default function Header() {
         </div>
 
         <div className="hidden sm:flex sm:gap-16 lg:gap-24">
-          <UserRegisterModal />
+          <Suspense>
+            <UserRegisterModal />
 
-          <UserLoginnModal />
+            <UserLoginnModal />
+          </Suspense>
         </div>
       </Container>
     </div>

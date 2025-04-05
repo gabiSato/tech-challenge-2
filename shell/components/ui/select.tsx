@@ -4,8 +4,6 @@ import clsx from "clsx";
 
 import ArrowIcon from "@/public/icons/dropdown-arrow.svg";
 
-import Text from "@/components/ui/text";
-
 type SelectProps<TValue extends string | number> = {
   value?: TValue;
   onChange: (value: TValue) => void;
@@ -50,10 +48,10 @@ export default function Select<TValue extends string | number>({
         type="button"
         onClick={handleClick}
       >
-        <Text className="pointer-events-none" size="sm" color="neutral-600">
+        <span className="text-sm text-neutral-600 pointer-events-none">
           {options.find((option) => option.value === value)?.label ||
             placeholder}
-        </Text>
+        </span>
 
         <ArrowIcon
           data-state={open ? "open" : "closed"}
@@ -78,9 +76,9 @@ export default function Select<TValue extends string | number>({
               data-selected={option.value === value}
               onClick={() => selectOption(option.value)}
             >
-              <Text size="sm" color="cyan-300">
+              <span className="text-sm text-cyan-300">
                 {option.label}
-              </Text>
+              </span>
             </li>
           ))}
         </ul>

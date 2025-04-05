@@ -1,7 +1,6 @@
 "use client";
 import { Button, type ButtonVariant } from "shell/components";
 import React, { useState } from "react";
-import { useRouter } from "next/router";
 
 import { signIn } from "@/lib/features/authentication/authentication-slice";
 import { useAppDispatch } from "@/lib/hooks/redux";
@@ -20,7 +19,6 @@ export default function UserAuthenticationModal({
   triggerButtonVariant = "green-secondary",
 }: UserAuthenticationModalProps) {
   const dispath = useAppDispatch();
-  const router = useRouter();
 
   const [open, setOpen] = useState(false);
 
@@ -30,7 +28,6 @@ export default function UserAuthenticationModal({
 
   function onSubmit(userLogin: UserLogin) {
     dispath(signIn(userLogin));
-    router.replace("/dashboard");
   }
 
   return (

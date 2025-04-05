@@ -5,6 +5,5 @@ export { default as Input } from "./input";
 export { default as Loader } from "./loader";
 export { default as Modal } from "./modal";
 export { default as Select } from "./select";
-export { default as Text } from "./text";
 
 export type { ButtonVariant } from "./button";
