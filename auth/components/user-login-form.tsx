@@ -1,8 +1,9 @@
 "use client";
-import { Input, Button } from "shell/components";
 import React, { useState } from "react";
 import { object, string } from "yup";
 import { toast } from "react-toastify";
+import Button from "shell/ui/button";
+import Input from "shell/ui/input";
 
 import { useValidation } from "@/lib/hooks/useValidation";
 import type { UserLogin } from "@/types/User";

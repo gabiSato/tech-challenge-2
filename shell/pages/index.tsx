@@ -1,4 +1,4 @@
-import { Container } from "@/components/ui";
+import Container from "@/components/ui/container";
 
 import Features from "@/components/home/features";
 import Header from "@/components/home/header";

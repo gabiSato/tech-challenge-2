@@ -1,5 +1,5 @@
 "use client";
-import { Button, type ButtonVariant } from "shell/components";
+import Button, { type ButtonVariant } from "shell/ui/button";
 import { toast } from "react-toastify";
 import { useState } from "react";
 

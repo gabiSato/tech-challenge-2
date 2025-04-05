@@ -1,5 +1,5 @@
 "use client";
-import { Container } from "@/components/ui";
+import Container from "@/components/ui/container";
 import Sidebar from "@/components/layout/sidebar";
 import Header from "@/components/layout/header";
 import Navbar from "@/components/layout/navbar";

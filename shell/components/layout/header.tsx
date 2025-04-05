@@ -1,6 +1,6 @@
 "use client";
-import { Container } from "@/components/ui";
 import NavigationMenu from "@/components/layout/navigation-menu";
+import Container from "@/components/ui/container";
 
 import AvatarIcon from "@/public/icons/avatar.svg";
 

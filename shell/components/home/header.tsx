@@ -4,7 +4,7 @@ const UserRegisterModal = lazy(() => import("auth/user-register-modal"));
 const UserLoginnModal = lazy(() => import("auth/user-login-modal"));
 
 import NavigationMenu from "@/components/layout/navigation-menu";
-import { Container } from "@/components/ui";
+import Container from "@/components/ui/container";
 
 import LogoImage from "@/public/images/logo.svg";
 import LogoCompactImage from "@/public/images/logo-compact.svg";

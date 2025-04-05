@@ -1,5 +1,5 @@
 "use client";
-import { Modal as BaseModal } from "shell/components";
+import BaseModal from "shell/ui/modal";
 import React from "react";
 import clsx from "clsx";
 

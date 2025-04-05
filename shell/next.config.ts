@@ -9,7 +9,13 @@ const nextConfig: NextConfig = {
         name: "shell",
         filename: "static/chunks/remoteEntry.js",
         exposes: {
-          "./components": "./components/ui/index.ts",
+          "./ui/button": "./components/ui/button.tsx",
+          "./ui/checkbox": "./components/ui/checkbox.tsx",
+          "./ui/container": "./components/ui/container.tsx",
+          "./ui/input": "./components/ui/input.tsx",
+          "./ui/loader": "./components/ui/loader.tsx",
+          "./ui/modal": "./components/ui/modal.tsx",
+          "./ui/select": "./components/ui/select.tsx",
         },
         remotes: {
           auth: `auth@http://localhost:4001/_next/static/${

@@ -1,7 +1,10 @@
 "use client";
-import { Select, Input, Button } from "shell/components";
 import { CurrencyInput } from "react-currency-mask";
 import { FormEvent } from "react";
+
+import Select from "shell/ui/select";
+import Input from "shell/ui/input";
+import Button from "shell/ui/button";
 
 import type { Transaction, TransactionFormData } from "@/types/Transaction";
 import { useTransactionForm } from "@/lib/hooks/useTransactionForm";

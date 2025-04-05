@@ -1,4 +1,4 @@
-import { Container } from "@/components/ui";
+import Container from "@/components/ui/container";
 
 import LogoImage from "@/public/images/logo.svg";
 import InstagramIcon from "@/public/icons/instagram.svg";

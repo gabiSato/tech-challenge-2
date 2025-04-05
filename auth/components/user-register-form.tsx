@@ -1,8 +1,11 @@
 "use client";
-import { Checkbox, Input, Button } from "shell/components";
 import { object, string, boolean } from "yup";
 import { toast } from "react-toastify";
 import { useState } from "react";
+
+import Checkbox from "shell/ui/checkbox";
+import Button from "shell/ui/button";
+import Input from "shell/ui/input";
 
 import { useValidation } from "@/lib/hooks/useValidation";
 import type { User } from "@/types/User";

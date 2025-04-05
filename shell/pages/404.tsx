@@ -1,7 +1,8 @@
 "use client";
 import { useRouter } from "next/navigation";
 
-import { Container, Button } from "@/components/ui";
+import Container from "@/components/ui/container";
+import Button from "@/components/ui/button";
 
 import NotFoundImage from "@/public/images/not-found.svg";
 

@@ -1,5 +1,5 @@
 "use client";
-import { Button, type ButtonVariant } from "shell/components";
+import Button, { type ButtonVariant } from "shell/ui/button";
 import React, { useState } from "react";
 
 import { signIn } from "@/lib/features/authentication/authentication-slice";
