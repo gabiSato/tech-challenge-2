@@ -1,5 +1,7 @@
-import UserLoginModal from "auth/user-login-modal";
-import UserRegisterModal from "auth/user-register-modal";
+import { lazy } from "react";
+
+const UserRegisterModal = lazy(() => import("auth/user-register-modal"));
+const UserLoginnModal = lazy(() => import("auth/user-login-modal"));
 
 import HeroImage from "@/public/images/investment.svg";
 

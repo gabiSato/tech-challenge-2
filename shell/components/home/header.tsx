@@ -1,6 +1,8 @@
 "use client";
-import UserRegisterModal from "auth/user-register-modal";
-import UserLoginnModal from "auth/user-login-modal";
+import { lazy } from "react";
+
+const UserRegisterModal = lazy(() => import("auth/user-register-modal"));
+const UserLoginnModal = lazy(() => import("auth/user-login-modal"));
 
 import NavigationMenu from "@/components/layout/navigation-menu";
 import { Container } from "@/components/ui";

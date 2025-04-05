@@ -1,5 +1,6 @@
 @import "tailwindcss";
-@source "auth";
+@source "../../auth";
+@source "../../transaction";
 
 @theme {
   --font-*: initial;
