@@ -49,7 +49,6 @@ export default function UserLoginForm({ onSubmit }: UserLoginFormProps) {
 
     if (isValid) {
       onSubmit({ email, password });
-      resetForm();
     } else {
       toast.error("Dados inválidos");
     }
